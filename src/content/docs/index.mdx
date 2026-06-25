@@ -1,0 +1,45 @@
+---
+title: raph
+description: A local-first graph-vector brain for coding agents — realtime codebase sync, ripgrep-style search, scoped memory, rules, local docs and handoffs, over MCP and the CLI.
+template: splash
+hero:
+  tagline: A local-first graph brain for coding agents. Realtime sync, fast search, scoped memory, rules, and shareable knowledge — over MCP and the CLI.
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/tesh254/raph
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Why raph
+
+<CardGrid stagger>
+	<Card title="Always-current graph" icon="random">
+		A filesystem watcher refreshes the graph within ~150ms of a save, so an
+		agent always works against an up-to-date view of the codebase.
+	</Card>
+	<Card title="Fast local search" icon="magnifier">
+		A trigram FTS5 index serves ranked keyword, literal, and regex search
+		without scanning every node — no ad-hoc bash greps required.
+	</Card>
+	<Card title="Scoped memory & rules" icon="approve-check">
+		Project, shared, and global memory plus rules that govern the whole dev
+		cycle or a single codebase.
+	</Card>
+	<Card title="Docs & handoffs" icon="document">
+		Typed local documents — architecture, handoff, reference, note — chunked
+		and linked. Reading a handoff marks it used for the next agent.
+	</Card>
+	<Card title="MCP and CLI" icon="setting">
+		Identical capabilities via an MCP server or `raph` CLI commands that emit
+		JSON for agents and text for humans.
+	</Card>
+	<Card title="Transferable knowledge" icon="cloud-download">
+		Export documents or whole bundles to a file, gist, repo, S3, or R2.
+	</Card>
+</CardGrid>

@@ -1,0 +1,33 @@
+/* raph docs theme — calm dark with an indigo accent and a subtle polka field. */
+:root {
+	--sl-color-accent-low: #1e1b4b;
+	--sl-color-accent: #6366f1;
+	--sl-color-accent-high: #c7d2fe;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #e0e7ff;
+	--sl-color-accent: #4f46e5;
+	--sl-color-accent-high: #312e81;
+}
+
+/* Polka-dot field behind the splash hero, echoing the raph studio aesthetic. */
+.hero {
+	position: relative;
+	border-radius: 1rem;
+	background-image: radial-gradient(
+		var(--sl-color-gray-5) 1px,
+		transparent 1.4px
+	);
+	background-size: 18px 18px;
+}
+
+.hero > img,
+.hero > .hero-html {
+	filter: drop-shadow(0 12px 40px color-mix(in srgb, var(--sl-color-accent) 35%, transparent));
+}
+
+.site-title {
+	letter-spacing: -0.02em;
+	font-weight: 700;
+}
