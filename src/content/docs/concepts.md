@@ -6,14 +6,22 @@ description: The graph model, workspaces, scopes, and how raph stays current.
 ## The graph
 
 raph stores everything as **nodes** and **edges** in a local SQLite database
-(`~/.raph/data/brain.db`). Nodes are files, code symbols (functions, types),
-document chunks, memory records, rules, and local documents. Edges connect them
-— a file `DECLARES` a function, a document `HAS_CHUNK` chunks, a note
-`RELATES_TO` a symbol.
+(`~/.raph/data/brain.db`). Nodes are files, code symbols, document chunks,
+memory records, rules, and local documents. Edges connect them — a file
+`DECLARES` a function, a document `HAS_SECTION`/`HAS_CHUNK` chunks, and a symbol
+`USES` or `MUTATES` another.
 
-Every node carries typed **properties** (JSON) and timestamps, so documents can
-record their `doc_type`, `status`, and freshness, and listings can filter on
-them.
+Code symbols are extracted per language: functions and types, plus the
+**variable kinds** agents most often hallucinate about — package-level `var` and
+`const` declarations are each indexed as their own node, so you can ask "where is
+this global read or written?" and get an answer from the graph. See
+[Symbol & node types](/reference/node-types/) for the full set of node types,
+edge types, and the properties each carries.
+
+Every node carries typed **properties** (JSON) and timestamps. Code symbols tag
+`global=true` and `decl=var|const` (and `lang=<grammar>` for non-Go languages);
+documents record their `doc_type`, `status`, and freshness — so listings can
+filter on them.
 
 ## Fast lookup
 

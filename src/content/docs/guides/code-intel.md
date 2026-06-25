@@ -20,6 +20,19 @@ language, the more accurate the `USES` / `MUTATES` edges.
 Every language always gets *at least* the bundled tiers — installing a resolver
 only raises precision, it is never required.
 
+## How a full index resolves references
+
+After the file walk, [`Run`](https://github.com/tesh254/raph/blob/feat/major-revamp/internal/indexer/indexer.go#L83)
+runs the tiers in order, each only raising precision for the languages it owns:
+
+1. [`linkGoUsages`](https://github.com/tesh254/raph/blob/feat/major-revamp/internal/indexer/gosem.go#L25) — `go/types` for Go.
+2. [`runSCIP`](https://github.com/tesh254/raph/blob/feat/major-revamp/internal/indexer/scip.go#L270) — installed compiler-grade indexers; for a covered language the within-file pass is skipped so its edges are authoritative.
+3. [`linkImportAwareUsages`](https://github.com/tesh254/raph/blob/feat/major-revamp/internal/indexer/importaware.go) — the pure-Go import-aware fallback.
+4. The within-file tree-sitter pass handles everything else (run during the walk).
+
+The symbol index these passes resolve against is built **once** and shared, and
+each pass writes its edges in a single batched transaction.
+
 ## See what you have
 
 ```bash
@@ -64,8 +77,11 @@ binary and require license review.
 
 ## For agents
 
-The MCP `index_codebase` result carries `scip_active` (languages resolved
-compiler-grade) and `scip_suggestions` (languages that could be upgraded, each
+The MCP `index_codebase` result carries
+[`scip_active`](https://github.com/tesh254/raph/blob/feat/major-revamp/internal/indexer/indexer.go#L42)
+(languages resolved compiler-grade) and `scip_suggestions` (languages that could
+be upgraded, each a
+[`SCIPSuggestion`](https://github.com/tesh254/raph/blob/feat/major-revamp/internal/indexer/scip.go#L206)
 with an `agent_action` command).
 
 **Protocol:** an agent must ask the user for permission before running an

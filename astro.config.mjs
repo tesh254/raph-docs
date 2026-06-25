@@ -43,7 +43,10 @@ export default defineConfig({
 				},
 				{
 					label: 'Reference',
-					items: [{ label: 'CLI commands', slug: 'reference/cli' }],
+					items: [
+						{ label: 'CLI commands', slug: 'reference/cli' },
+						{ label: 'Symbol & node types', slug: 'reference/node-types' },
+					],
 				},
 			],
 		}),
