@@ -57,6 +57,20 @@ for agents/pipes, text for terminals) and `-q/--quiet` to suppress verbose logs.
 | `... --repo owner/name --repo-path <p>` | Commit into a repo. |
 | `... --s3 s3://bucket/key [--r2-endpoint <url>]` | Upload to S3/R2. |
 
+## Code intelligence
+
+| Command | Purpose |
+| --- | --- |
+| `raph code-intel` | List code-intelligence resolvers and whether each is installed. |
+| `raph code-intel install <language>` | Install the compiler-grade resolver for a language. |
+| `... --dry-run` | Print the install command without running it. |
+
+`code-intel` controls cross-file reference accuracy. Go always uses `go/types`.
+Other languages use the bundled pure-Go import-aware resolver by default, and
+are upgraded to compiler-grade accuracy when their resolver is installed. The
+`scip` alias is accepted (`raph scip` == `raph code-intel`). See
+[Code intelligence](/guides/code-intel/).
+
 ## Other
 
 | Command | Purpose |

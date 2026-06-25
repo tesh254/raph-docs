@@ -26,6 +26,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Realtime sync', slug: 'guides/sync' },
 						{ label: 'Search', slug: 'guides/search' },
+						{ label: 'Code intelligence', slug: 'guides/code-intel' },
 						{ label: 'Memory', slug: 'guides/memory' },
 						{ label: 'Rules', slug: 'guides/rules' },
 						{ label: 'Documents & handoffs', slug: 'guides/documents' },
