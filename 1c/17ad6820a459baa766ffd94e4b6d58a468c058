@@ -1,0 +1,25 @@
+.github/workflows/deploy.yml
+  s_30200fc5b8ddb9::t_d9cdfb15d56723 18
+src/content/docs/reference/cli.md
+  s_30200fc5b8ddb9::t_b29556bf3a13a1 60-73
+astro.config.mjs
+  s_30200fc5b8ddb9::t_24ae4264f7c0fa 29
+src/content/docs/guides/code-intel.md
+  s_30200fc5b8ddb9::t_30bc29276a196f 1-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "1c17ad6820a459baa766ffd94e4b6d58a468c058",
+  "prompts": {},
+  "sessions": {
+    "s_30200fc5b8ddb9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f22dfad5-df79-48ad-b5d4-2bf8ecfe50e2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "tesh254 <ewachira254@gmail.com>"
+    }
+  }
+}
