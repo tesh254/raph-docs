@@ -1,0 +1,26 @@
+src/content/docs/reference/node-types.md
+  s_b59b6278ace8a9::t_282fd1c35d6fd6 1-62
+src/content/docs/concepts.md
+  s_b59b6278ace8a9::t_61cc3cc0fc5139 9-12,14-24
+src/content/docs/guides/code-intel.md
+  s_b59b6278ace8a9::t_0347c75d7bde56 80-84
+  s_b59b6278ace8a9::t_d456a57f7dc9f8 23-35
+astro.config.mjs
+  s_b59b6278ace8a9::t_576f76807e07a0 46-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "7000ad039cef43075e9285bf466f1042b789abac",
+  "prompts": {},
+  "sessions": {
+    "s_b59b6278ace8a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "33666a8f-f10a-497e-b063-142e5a406ebc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "tesh254 <ewachira254@gmail.com>"
+    }
+  }
+}
