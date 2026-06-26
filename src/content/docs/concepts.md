@@ -50,6 +50,22 @@ Memory and rules are **scoped**:
 This lets an agent tell apart what governs the whole development cycle from what
 applies to a single codebase.
 
+## Memory footprint
+
+raph is built to stay light. Indexing streams its work — the symbol index is
+loaded with a lean projection (no content or embeddings), per-run caches are
+released as soon as they're done, and reference edges are flushed in bounded
+batches rather than held in memory. The studio graph and stats views read
+through a lean query that caps node content in SQL and never loads embedding
+vectors.
+
+As a backstop, startup installs a **soft heap ceiling** (Go's
+`debug.SetMemoryLimit`): it honors `GOMEMLIMIT` if you set it, then
+`RAPH_MEMORY_LIMIT` (e.g. `RAPH_MEMORY_LIMIT=2GiB`), otherwise defaults to 80%
+of detected host/cgroup memory. It is *soft* — the GC works harder near the
+ceiling instead of crashing — so it guards against runaway memory without
+slowing normal runs.
+
 ## Staying current
 
 A filesystem watcher (fsnotify) reacts to saves with a short debounce and
