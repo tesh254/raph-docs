@@ -1,0 +1,21 @@
+src/content/docs/concepts.md
+  s_b59b6278ace8a9::t_b62df634a19b8f 53-68
+src/content/docs/guides/export.md
+  s_b59b6278ace8a9::t_abdbacc715a549 7,12-14,17-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "c3e12b9b7ffb06dc95da925460a4d3a6c4f65169",
+  "prompts": {},
+  "sessions": {
+    "s_b59b6278ace8a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "33666a8f-f10a-497e-b063-142e5a406ebc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "tesh254 <ewachira254@gmail.com>"
+    }
+  }
+}
