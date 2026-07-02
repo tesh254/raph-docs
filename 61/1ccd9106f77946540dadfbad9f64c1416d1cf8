@@ -1,0 +1,19 @@
+src/content/docs/guides/documents.md
+  s_d071be8e5cb50b::t_a76461f5bde3eb 58-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "611ccd9106f77946540dadfbad9f64c1416d1cf8",
+  "prompts": {},
+  "sessions": {
+    "s_d071be8e5cb50b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c01fabe8-80a1-4765-97b7-90dc339f424d",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "tesh254 <ewachira254@gmail.com>"
+    }
+  }
+}
