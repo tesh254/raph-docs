@@ -22,11 +22,11 @@ raph agents mcp setup --path .
 
 This writes the correct config for OpenCode (`opencode.json`), Claude Code
 (`.mcp.json`), Codex (`.codex/config.toml`), Cursor (`.cursor/mcp.json`), and Pi
-(`.pi/mcp.json`).
+(`.pi/mcp.json`). Add `--dry-run` first to preview target files before writing.
 
 ### Tools
 
-- `search` — ripgrep-style search (auto/literal/regex/vector, type & scope filters)
+- `search` — graph search with CLI-friendly modes (auto/literal/Go regexp/vector, type & scope filters)
 - `search_codebase`, `index_codebase`
 - `store_memory`, `update_memory`, `deprecate_memory`, `get_memory_history`
 - `search_project_knowledge`, `search_shared_knowledge`, `search_global_preferences`

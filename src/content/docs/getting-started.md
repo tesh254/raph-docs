@@ -49,6 +49,7 @@ raph agents mcp setup --path .
 ```
 
 This writes the right config for OpenCode, Claude Code, Codex, Cursor, and Pi.
+Add `--dry-run` first to preview target files before writing.
 See [MCP & CLI](/agents/mcp-and-cli/) for details, or [Plugins](/agents/plugins/)
 to install raph as a packaged plugin.
 

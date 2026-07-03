@@ -78,6 +78,6 @@ are upgraded to compiler-grade accuracy when their resolver is installed. The
 | `raph start` | Start the MCP server over stdio. |
 | `raph studio` | Launch the local graph explorer UI. |
 | `raph crawl <url> [--single]` | Crawl documentation into the graph. |
-| `raph agents mcp setup --path .` | Install MCP config for supported agents. |
+| `raph agents mcp setup --path .` | Install auto-detected project MCP config for supported agents. |
 | `raph config init` | Create `~/.raph` config files. |
 | `raph clear --yes` | Wipe all graph data. |

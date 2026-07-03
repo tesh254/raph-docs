@@ -9,7 +9,7 @@ export default defineConfig({
 		starlight({
 			title: 'raph',
 			description:
-				'Local-first graph-vector brain for coding agents: realtime codebase sync, ripgrep-style search, scoped memory, rules, local docs and handoffs.',
+				'Local-first graph-vector brain for coding agents: realtime codebase sync, agent-friendly CLI search, scoped memory, rules, local docs and handoffs.',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/tesh254/raph' }],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [

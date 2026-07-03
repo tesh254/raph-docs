@@ -35,3 +35,6 @@ If your agent reads a standard MCP config, run:
 ```bash
 raph agents mcp setup --path .
 ```
+
+Use `raph agents mcp setup --path . --dry-run` to preview generated project
+config before writing.
