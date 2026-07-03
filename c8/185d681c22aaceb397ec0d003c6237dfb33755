@@ -1,0 +1,33 @@
+src/content/docs/getting-started.md
+  s_86c05dd61d07ec::t_90734cb359bd89 52
+src/content/docs/reference/cli.md
+  s_86c05dd61d07ec::t_90734cb359bd89 81
+src/content/docs/guides/search.md
+  s_86c05dd61d07ec::t_8b29495d796b54 3,6-10,38-39,41-42
+  s_86c05dd61d07ec::t_90734cb359bd89 17-18,36-37
+src/content/docs/agents/plugins.md
+  s_86c05dd61d07ec::t_90734cb359bd89 38-40
+src/content/docs/agents/mcp-and-cli.md
+  s_86c05dd61d07ec::t_8b29495d796b54 29
+  s_86c05dd61d07ec::t_90734cb359bd89 25
+astro.config.mjs
+  s_86c05dd61d07ec::t_8b29495d796b54 12
+src/content/docs/index.mdx
+  s_86c05dd61d07ec::t_8b29495d796b54 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "c8185d681c22aaceb397ec0d003c6237dfb33755",
+  "prompts": {},
+  "sessions": {
+    "s_86c05dd61d07ec": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f2482-65c8-71c1-a499-89a2b4ef7182",
+        "model": "gpt-5.5"
+      },
+      "human_author": "tesh254 <ewachira254@gmail.com>"
+    }
+  }
+}
