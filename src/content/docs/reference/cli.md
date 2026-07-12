@@ -52,7 +52,8 @@ for agents/pipes, text for terminals) and `-q/--quiet` to suppress verbose logs.
 | Command | Purpose |
 | --- | --- |
 | `raph export --doc <id> --out <file>` | Export a document. |
-| `raph export --bundle --out <file>` | Export a whole-workspace bundle. |
+| `raph export --bundle --out <file>` | Export the portable brain (memory + rules + handoffs). |
+| `... --scope portable\|all\|global\|shared\|project` | Which scopes the bundle gathers (`project` = current repo only). |
 | `... --gist [--public]` | Publish as a GitHub gist. |
 | `... --repo owner/name --repo-path <p>` | Commit into a repo. |
 | `... --s3 s3://bucket/key [--r2-endpoint <url>]` | Upload to S3/R2. |

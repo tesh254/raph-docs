@@ -16,14 +16,22 @@ What travels:
 ## Export the brain
 
 ```bash
-raph export --bundle --out brain.json              # portable: global + shared scopes (default)
-raph export --bundle --scope all --out brain.json  # also include project-scoped memory
+raph export --bundle --out brain.json                        # portable: global + shared scopes (default)
+raph export --bundle --scope all --out brain.json            # also include project-scoped memory (all repos)
 raph export --bundle --scope global --out brain.json
-raph export --bundle --out-format md --out brain.md  # human-readable digest (not importable)
+raph export --bundle --scope project --path . --out brain.json  # only this repo's project memory + handoffs
+raph export --bundle --out-format md --out brain.md          # human-readable digest (not importable)
 ```
 
 `--scope` selects which memory scopes to gather: `portable` (default, global +
-shared), `all`, `global`, `shared`, or `project`. Handoffs are always included.
+shared), `all`, `global`, `shared`, or `project`. Handoffs are included alongside
+the memory.
+
+`--scope project` is scoped to the **current repository**: it exports only the
+project-scoped memory and handoffs for the repo at `--path` (default `.`), so a
+published bundle can't leak another repository's project memory. The other
+scopes are not repo-specific — `all` includes project-scoped memory across every
+indexed repo.
 
 Export defaults to **JSON** — a versioned, round-trippable envelope:
 
