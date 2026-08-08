@@ -1,0 +1,27 @@
+astro.config.mjs
+  s_b616119b05f3cd::t_ad921640347d26 34
+src/content/docs/guides/memory.md
+  s_b616119b05f3cd::t_f49b7b20c8b3d5 11-13,15-24,52-83
+src/content/docs/reference/cli.md
+  s_b616119b05f3cd::t_4f12e55e7e3452 18,83
+src/content/docs/agents/mcp-and-cli.md
+  s_b616119b05f3cd::t_fa00bf727395f7 29-33,36
+src/content/docs/guides/studio.md
+  s_b616119b05f3cd::t_584ac835d67140 1-122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "d0fa8a2f783bfcf204b61ea13d4572220b10a563",
+  "prompts": {},
+  "sessions": {
+    "s_b616119b05f3cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "88cc8262-7d36-4d42-9a1c-6e2b6c7b31d9",
+        "model": "claude-opus-5"
+      },
+      "human_author": "ericwachira-nrny <eric.wachira@neurony.ro>"
+    }
+  }
+}
