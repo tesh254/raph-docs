@@ -15,6 +15,7 @@ for agents/pipes, text for terminals) and `-q/--quiet` to suppress verbose logs.
 | `raph sync --status` | Show worker status and registered repositories. |
 | `raph sync --stop` | Stop the background worker. |
 | `raph sync --remove --path .` | Stop syncing a repo and drop its graph data. |
+| `raph backfill` | Rebuild the project/workspace/directory graph for repos indexed before it existed, and move documents still stored under an indexer workspace. Reads nothing from disk, re-embeds nothing, safe to re-run. |
 
 ## Search
 
@@ -79,6 +80,6 @@ are upgraded to compiler-grade accuracy when their resolver is installed. The
 | `raph start` | Start the MCP server over stdio. |
 | `raph studio` | Launch the local graph explorer UI. |
 | `raph crawl <url> [--single]` | Crawl documentation into the graph. |
-| `raph agents mcp setup --path .` | Install auto-detected project MCP config for supported agents. |
+| `raph agents mcp setup --path .` | Install MCP config for supported agents. Defaults to each agent's global config; `--scope local` writes project files. |
 | `raph config init` | Create `~/.raph` config files. |
 | `raph clear --yes` | Wipe all graph data. |

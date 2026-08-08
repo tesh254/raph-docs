@@ -26,10 +26,15 @@ This writes the correct config for OpenCode (`opencode.json`), Claude Code
 
 ### Tools
 
+Memory and document tools accept `working_directory` — the absolute path the
+agent is working in. raph resolves the project from it. Pass it: the server's
+own working directory is wherever your client launched it, not where you are
+working. See [Memory](/guides/memory/).
+
 - `search` — graph search with CLI-friendly modes (auto/literal/Go regexp/vector, type & scope filters)
 - `search_codebase`, `index_codebase`
+- `search_memory` — the one recall tool: ranks every memory by meaning and boosts the project resolved from `working_directory`. No scope filter
 - `store_memory`, `update_memory`, `deprecate_memory`, `get_memory_history`
-- `search_project_knowledge`, `search_shared_knowledge`, `search_global_preferences`
 - `store_rule`, `list_rules`
 - `add_document`, `list_documents`, `read_document`, `link_nodes`
 - `crawl_url`, `crawl_website`
