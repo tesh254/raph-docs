@@ -14,22 +14,31 @@ Start the server (stdio):
 raph start
 ```
 
-Install project config for supported agents automatically:
+Install config for supported agents automatically:
 
 ```bash
 raph agents mcp setup --path .
 ```
 
-This writes the correct config for OpenCode (`opencode.json`), Claude Code
-(`.mcp.json`), Codex (`.codex/config.toml`), Cursor (`.cursor/mcp.json`), and Pi
-(`.pi/mcp.json`). Add `--dry-run` first to preview target files before writing.
+By default this writes each agent's **global** (user-level) config, so every
+project picks raph up: `~/.config/opencode/opencode.json`, `~/.claude.json`,
+`~/.codex/config.toml`, `~/.cursor/mcp.json`, and `~/.pi/mcp.json`. Pass
+`--scope local` to write project files instead (`opencode.json`, `.mcp.json`,
+`.codex/config.toml`, `.cursor/mcp.json`, `.pi/mcp.json`); an interactive
+terminal is asked which to use when `--scope` is omitted. Add `--dry-run` first
+to preview target files before writing.
 
 ### Tools
 
+Memory and document tools accept `working_directory` — the absolute path the
+agent is working in. raph resolves the project from it. Pass it: the server's
+own working directory is wherever your client launched it, not where you are
+working. See [Memory](/guides/memory/).
+
 - `search` — graph search with CLI-friendly modes (auto/literal/Go regexp/vector, type & scope filters)
 - `search_codebase`, `index_codebase`
+- `search_memory` — the one recall tool: ranks every memory by meaning and boosts the project resolved from `working_directory`. No scope filter
 - `store_memory`, `update_memory`, `deprecate_memory`, `get_memory_history`
-- `search_project_knowledge`, `search_shared_knowledge`, `search_global_preferences`
 - `store_rule`, `list_rules`
 - `add_document`, `list_documents`, `read_document`, `link_nodes`
 - `crawl_url`, `crawl_website`

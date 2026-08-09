@@ -42,14 +42,16 @@ raph config init
 
 ## Connect an agent
 
-Install the project MCP config for supported agents:
+Install the MCP config for supported agents:
 
 ```bash
 raph agents mcp setup --path .
 ```
 
-This writes the right config for OpenCode, Claude Code, Codex, Cursor, and Pi.
-Add `--dry-run` first to preview target files before writing.
+This writes the right config for OpenCode, Claude Code, Codex, Cursor, and Pi —
+by default into each agent's global (user-level) config, so every project picks
+raph up. Use `--scope local` for project files instead. Add `--dry-run` first to
+preview target files before writing.
 See [MCP & CLI](/agents/mcp-and-cli/) for details, or [Plugins](/agents/plugins/)
 to install raph as a packaged plugin.
 

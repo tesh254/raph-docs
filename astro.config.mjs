@@ -31,6 +31,7 @@ export default defineConfig({
 						{ label: 'Rules', slug: 'guides/rules' },
 						{ label: 'Documents & handoffs', slug: 'guides/documents' },
 						{ label: 'Export & transfer', slug: 'guides/export' },
+						{ label: 'Studio', slug: 'guides/studio' },
 					],
 				},
 				{
