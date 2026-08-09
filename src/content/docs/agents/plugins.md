@@ -26,7 +26,8 @@ registers as a local MCP server (`type: local`, `command: ["raph", "start"]`).
 ## Codex
 
 A Codex plugin lives at `plugins/raph/.codex-plugin`. For a direct config,
-`raph agents mcp setup` writes `[mcp_servers.raph]` into `.codex/config.toml`.
+`raph agents mcp setup` writes `[mcp_servers.raph]` into `~/.codex/config.toml`
+(or `.codex/config.toml` with `--scope local`).
 
 ## Any agent
 
@@ -36,5 +37,6 @@ If your agent reads a standard MCP config, run:
 raph agents mcp setup --path .
 ```
 
-Use `raph agents mcp setup --path . --dry-run` to preview generated project
-config before writing.
+Setup writes each agent's global config by default; add `--scope local` to write
+project files. Use `raph agents mcp setup --path . --dry-run` to preview the
+target files before writing.

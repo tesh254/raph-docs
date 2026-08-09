@@ -51,8 +51,8 @@ that made them.
 
 ## Agents and MCP
 
-Agents reach memory through `store_memory`, `update_memory`, `deprecate_memory`,
-and `search_memory`.
+Agents reach memory through `search_memory`, `store_memory`, `update_memory`,
+`deprecate_memory`, and `get_memory_history`.
 
 **Recall is one tool.** `search_memory` takes a query and ranks *every* memory by
 meaning — this project's, other projects', shared, and global — then boosts the

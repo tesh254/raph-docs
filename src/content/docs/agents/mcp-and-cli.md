@@ -14,15 +14,19 @@ Start the server (stdio):
 raph start
 ```
 
-Install project config for supported agents automatically:
+Install config for supported agents automatically:
 
 ```bash
 raph agents mcp setup --path .
 ```
 
-This writes the correct config for OpenCode (`opencode.json`), Claude Code
-(`.mcp.json`), Codex (`.codex/config.toml`), Cursor (`.cursor/mcp.json`), and Pi
-(`.pi/mcp.json`). Add `--dry-run` first to preview target files before writing.
+By default this writes each agent's **global** (user-level) config, so every
+project picks raph up: `~/.config/opencode/opencode.json`, `~/.claude.json`,
+`~/.codex/config.toml`, `~/.cursor/mcp.json`, and `~/.pi/mcp.json`. Pass
+`--scope local` to write project files instead (`opencode.json`, `.mcp.json`,
+`.codex/config.toml`, `.cursor/mcp.json`, `.pi/mcp.json`); an interactive
+terminal is asked which to use when `--scope` is omitted. Add `--dry-run` first
+to preview target files before writing.
 
 ### Tools
 
